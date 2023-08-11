@@ -1,6 +1,6 @@
 :root {
    /* fuentes */
-   --fontPrimary: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+   --fontPrimary: 'Lato', sans-serif;
    --fsSmall: 14px;
    --fsNormal: 16px;
    --fsHeadline: 20px;
@@ -27,12 +27,23 @@
 
 body{
    font-family: var(--fontPrimary);
+   overflow-x: hidden;
 }
 
-main.container{
+.title{
+   font-size: var(--fsBig);
+   text-align: center;
+}
+
+.subtitle{
+   font-size: var(--fsHeadline);
+   text-align: center;
+}
+
+.container{
    width: 100%;
    max-width: var(--containerMaxWidth);
-   min-height: 100vh;
-   padding-top: var(--navHeight);
    margin: 0 auto;
+   padding-top: var(--navHeight);
 }
+
