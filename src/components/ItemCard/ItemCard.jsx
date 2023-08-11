@@ -1,11 +1,24 @@
-import React from 'react'
+// {icon, text, alt}
+import './itemCard.css'
 
-const ItemCard = ({icon, text, alt}) => {
+const ItemCard = () => {
   return (
-      <div>
-        <img src={icon} alt={alt} />
-        <span>{text}</span>
+    <section className="house-measures-data">
+      <div className='border-end'>
+        {/* <img src="" alt="" /> */}
+        <span>60m2</span>
       </div>
+
+      <div className='border-end'>
+        {/* <img src="" alt="" /> */}
+        <span>T. Baldio</span>
+      </div>
+      
+      <div>
+        {/* <img src="" alt="" /> */}
+        <span>Perera</span>
+      </div>
+    </section>  
   )
 }
 

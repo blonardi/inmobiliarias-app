@@ -1,17 +1,20 @@
 :root {
    /* fuentes */
    --fontPrimary: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-   --fsNormal: 16px;
    --fsSmall: 14px;
+   --fsNormal: 16px;
    --fsHeadline: 20px;
    --fsBig: 24px;
    /* colores */
    --colorPrimary: #D9A867;
    --colorSecondary: #343434;
+   --color-blue-title: #0E2E50;
+   --color-green-title: #00B98E;
+   --color-black-pearl-700: #3C5562;
    --bgColor: #fff;
    --colorSimilar: #DFBC8E;
    /* componentes */
-   --navHeightt: 100px;
+   --navHeight: 100px;
    --containerMaxWidth: 992px;
 }
 
