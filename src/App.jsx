@@ -1,9 +1,11 @@
-import Card from "./components/Card/Card"
+import Header from './components/Header/Header'
+import HomePage from "./pages/HomePage/HomePage"
 
 function App() {
    return (
       <>
-         <Card />
+         < Header />
+         < HomePage />
       </>
    )
 }

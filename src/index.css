@@ -16,6 +16,7 @@
    /* componentes */
    --navHeight: 100px;
    --containerMaxWidth: 992px;
+   --logoHeight: 100px;
 }
 
 *{
@@ -26,4 +27,12 @@
 
 body{
    font-family: var(--fontPrimary);
+}
+
+main.container{
+   width: 100%;
+   max-width: var(--containerMaxWidth);
+   min-height: 100vh;
+   padding-top: var(--navHeight);
+   margin: 0 auto;
 }
