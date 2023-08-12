@@ -8,14 +8,19 @@
   background: white;
 }
 
-.house-image-src {
-  height: auto;
-  width: 380px;
-  transition: .5s;
+.house-image {
+  overflow: hidden;
+
+  .house-image-src {
+    height: auto;
+    width: 380px;
+    transition: .5s;
+  }
 }
 
+
 .house-image-src:hover {
-  transform: scaleX(1.1)
+  transform: scale(1.1)
 }
 
 .house-info {
