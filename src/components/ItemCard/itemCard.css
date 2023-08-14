@@ -5,5 +5,7 @@
 }
 
 .border-end {
+  border-left: 1px dashed;
   border-right: 1px dashed;
+  padding: 0 2em;
 }

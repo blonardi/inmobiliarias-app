@@ -1,9 +1,8 @@
 import './card.css'
-import image from "../../../idea5-path/materiales/property-4.jpg"
 import gpsLogo from "../../assets/gps.svg"
-import ItemCard from '../ItemCard/ItemCard'
+import { ItemCard } from '../ItemCard/ItemCard'
 
-const Card = () => {
+export const Card = ({image, price, title, address}) => {
   return ( 
     <article className='house-card'>
       <div className="house-image">
@@ -11,23 +10,25 @@ const Card = () => {
       </div>
       <section className="house-info">
         <div className="house-price">
-          <p>$24,600</p>
+          <p>${price}</p>
         </div>
         <header className="house-name">
-          <h2>Golden Urban House For Sell</h2>
+          <h2>{title}</h2>
         </header>
         <div className="house-address">
           <img src={gpsLogo} alt="" />
-          <div className="">
-            <p>123 Street, New York, USA</p>
+          <div className="house-address-direction">
+            <p>{address}</p>
           </div>
         </div>
       </section>
       <footer className="house-measures"> 
-        <ItemCard />
+        <ItemCard 
+          meters={"60m2"}
+          type={"Lote"}
+          inmobiliaria={"Inm. Perera"}
+        />
       </footer>    
     </article>
  )
 }
-
-export default Card

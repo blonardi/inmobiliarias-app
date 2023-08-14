@@ -26,7 +26,7 @@
 .house-info {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin: 10px 0;
   gap: 10px;
 
   .house-price p {
@@ -47,6 +47,11 @@
     
   .house-address {
     display: flex;
+    margin-bottom: 1rem;
+
+    .house-address-direction {
+      font-size: 1rem;
+    }
   }
 }
 

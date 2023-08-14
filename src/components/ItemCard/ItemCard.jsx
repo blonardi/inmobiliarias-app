@@ -1,25 +1,25 @@
 // {icon, text, alt}
 import './itemCard.css'
 
-const ItemCard = () => {
-  return (
+export const ItemCard = ({meters, type, inmobiliaria}) => {
+  return (  
     <section className="house-measures-data">
-      <div className='border-end'>
+      <div>
         {/* <img src="" alt="" /> */}
-        <span>60m2</span>
+        <span>{meters}</span>
       </div>
 
       <div className='border-end'>
         {/* <img src="" alt="" /> */}
-        <span>T. Baldio</span>
+        <span>{type}</span>
       </div>
       
       <div>
         {/* <img src="" alt="" /> */}
-        <span>Perera</span>
+        <span>{inmobiliaria}</span>
       </div>
     </section>  
   )
 }
 
-export default ItemCard
+// export default ItemCard
