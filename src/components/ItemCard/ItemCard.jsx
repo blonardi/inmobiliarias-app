@@ -6,7 +6,7 @@ export const ItemCard = ({meters, type, inmobiliaria}) => {
     <section className="house-measures-data">
       <div>
         {/* <img src="" alt="" /> */}
-        <span>{meters}</span>
+        <span>{meters}m2</span>
       </div>
 
       <div className='border-end'>

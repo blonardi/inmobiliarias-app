@@ -1,4 +1,3 @@
-import React from 'react'
 import { useParams } from 'react-router-dom'
 
 const dataAssets = [
@@ -41,14 +40,19 @@ const dataAssets = [
    }
  ];
 
-export default function Details() {
-   const {houseId} = useParams()
-   const thisHouse = dataAssets.filter(data => data.id === houseId)
-   const { title } = thisHouse[0]
+export const Details = () => {
+   const {id} = useParams()
+   const house = dataAssets[id]
+  //  const { title } = thisHouse[0]
    
   return (
     <main className='container'>
-      <h2>{title}</h2>
+      <div className="house-details">
+        <img src={house.image} alt={`House`} />
+        <h2>{house.title}</h2>
+        <p>Price: ${house.price}</p>
+        <p>Address: {house.address}</p>
+      </div>
     </main>
   )
 }
