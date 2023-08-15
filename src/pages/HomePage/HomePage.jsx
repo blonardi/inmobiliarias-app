@@ -79,8 +79,7 @@ export default function HomePage() {
                   title={title}
                   address={address}
                />
-            
-         
+      
          ))}
       </section>
    </main>
