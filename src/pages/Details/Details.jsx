@@ -9,6 +9,7 @@ export const Details = () => {
   //  const { title } = thisHouse[0]
    
   return (
+
     <main className='container'>
       <div className="house-details">
         <img src={house.image} alt={`House`} />
