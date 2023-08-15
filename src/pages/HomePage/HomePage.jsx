@@ -68,7 +68,7 @@ export default function HomePage() {
          </div>
       </section> */}
 
-      <section className='container'>
+      <section className='container-homepage'>
 
          {dataAssets.map(({ id, image, price, title, address}) => (
             

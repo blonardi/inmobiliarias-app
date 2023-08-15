@@ -23,8 +23,12 @@
    text-transform: uppercase;
 }
 
-.container {
+.container-homepage {
    display: flex;
+   gap: 30px;
+   max-width: var(--containerMaxWidth);
+   margin: 0 auto;
+   padding-top: var(--navHeight);
    justify-content: space-between;
    flex-wrap: wrap;
    /* text-align: center; */
