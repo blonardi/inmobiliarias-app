@@ -43,41 +43,44 @@ const dataAssets = [
      image: image,
      price: 180000,
      title: "Casa Familiar",
-     address: "Camino Tranquilo 777"
+     address: "Camino Tranquilo 777",
+     meters: "50m"
    }
  ];
 
 export default function HomePage() {
 
-   // const backgroundImageStyles = {
-   //    backgroundImage: `url("https://cdn.pixabay.com/photo/2013/11/05/19/12/buildings-205986_1280.jpg")`,
-   //    backgroundSize: 'cover',
-   //    backgroundPosition: 'center',
-   //    backgroundRepeat: 'no-repeat'
-   // }
+    const backgroundImageStyles = {
+       backgroundImage: `url("https://cdn.pixabay.com/photo/2013/11/05/19/12/buildings-205986_1280.jpg")`,
+       backgroundSize: 'cover',
+       backgroundPosition: 'center',
+       backgroundRepeat: 'no-repeat'
+    }
 
 
   return (
    <main>
-      {/* <section className='heading-page' style={backgroundImageStyles}>
+      <section className='heading-page' style={backgroundImageStyles}>
          <div className='container heading-container'>
             <div className='heading-textContainer'>
                <h2 className='subtitle'>Bonpland</h2>
                <h1 className='title'>Find a perfect home to live with your family</h1>
             </div>
          </div>
-      </section> */}
+      </section>
 
       <section className='container-homepage'>
 
-         {dataAssets.map(({ id, image, price, title, address}) => (
+         {dataAssets.map(({ id, image, price, title, address }) => (
             
                <Card
                   key={id}
+                  id={id}
                   image={image}
                   price={price}
                   title={title}
                   address={address}
+                  
                />
       
          ))}
