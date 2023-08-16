@@ -4,7 +4,7 @@ import { ItemCard }  from '../ItemCard/ItemCard.jsx'
 import { Link } from 'react-router-dom';
 
 
-export const Card = ({id, image, price, title, address, meters, type, inmobiliaria}) => {
+export const Card = ({id, image, price, title, address, description, meters, type, inmobiliaria}) => {
   return ( 
     <Link to={`/details/${id}`} className="card-link">
       <article className='house-card'>
@@ -13,7 +13,7 @@ export const Card = ({id, image, price, title, address, meters, type, inmobiliar
         </div>
         <section className="house-info">
           <div className="house-price">
-            <p>{price}</p>
+            <p>USD {price}</p>
           </div>
           <header className="house-name">
             <h2>{title}</h2>

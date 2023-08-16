@@ -1,7 +1,7 @@
 import './header.css'
 import logoImg from '../../../idea5-path/materiales/bonpland.jfif'
 
-const Header = () => {
+export const Header = () => {
    return (
       <header className='header-container'>
          <nav>
@@ -12,5 +12,3 @@ const Header = () => {
       </header>
    )
 }
-
-export default Header
