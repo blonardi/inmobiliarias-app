@@ -4,7 +4,7 @@ import { ItemCard }  from '../ItemCard/ItemCard.jsx'
 import { Link } from 'react-router-dom';
 
 
-export const Card = ({id, image, price, title, address, description, meters, type, inmobiliaria}) => {
+export const Card = ({id, image, price, title, address, description, meters, type, localidad, inmobiliaria}) => {
   return ( 
     <Link to={`/details/${id}`} className="card-link">
       <article className='house-card'>

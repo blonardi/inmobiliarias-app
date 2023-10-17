@@ -6,7 +6,8 @@ import { dataAssets } from '../../assets/dataAssets'
 
 export const Details = () => {
    const {id} = useParams()
-   const house = dataAssets[id]
+   console.log(id)
+   const house = dataAssets[id-1]
    console.log(house)
   //  const { title } = thisHouse[0]
    

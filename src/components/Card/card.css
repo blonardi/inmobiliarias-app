@@ -10,12 +10,12 @@
 
 .house-image {
   overflow: hidden;
+}
 
-  .house-image-src {
-    height: auto;
-    width: 380px;
-    transition: .5s;
-  }
+.house-image-src {
+	height: auto;
+	width: 380px;
+	transition: .5s;
 }
 
 
