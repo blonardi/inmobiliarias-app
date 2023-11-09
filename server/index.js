@@ -194,7 +194,7 @@ app.get('/sum/:num1/:num2', (req, res) => {
   res.send(`la suma es ${Number(req.params.num1) + Number(req.params.num2)}`)
 })
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`)
 })
