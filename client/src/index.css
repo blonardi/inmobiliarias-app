@@ -35,6 +35,11 @@ body{
    overflow-x: hidden;
 }
 
+main {
+	margin: 48px 0;
+
+}
+
 .title{
    font-size: var(--fsBig);
    text-align: center;

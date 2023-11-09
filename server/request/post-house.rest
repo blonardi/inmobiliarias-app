@@ -1,0 +1,15 @@
+POST http://localhost:3001/api/houses
+Content-Type: application/json
+
+
+{
+    "price": 820000,
+    "title": "Basdasdasdsaful Casa",
+    "address": "Calle Principal 123",
+    "description":
+      "SumérgeteSumérgeteSumérgete en la serenidad de esta encantadora casa de campo. Con un hermoso jardín que te invita a la relajación al aire libre, esta residencia ofrece un refugio tranquilo en medio de la naturaleza. Sus detalles rústicos y ambiente acogedor te harán sentir como en casa.",
+    "meters": 160,
+    "type": "Lote",
+    "localidad": "Larroque",
+    "inmobiliaria": "Perera"
+}
