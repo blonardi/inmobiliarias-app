@@ -187,11 +187,6 @@ app.use((req, res, next) => {
     error: 'Recurso no encontrado',
     message: 'El recurso solicitado no existe.'
   })
-  next()
-})
-
-app.get('/sum/:num1/:num2', (req, res) => {
-  res.send(`la suma es ${Number(req.params.num1) + Number(req.params.num2)}`)
 })
 
 const PORT = process.env.PORT || 3001
