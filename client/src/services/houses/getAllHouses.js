@@ -6,6 +6,6 @@ export const getAllHouses = async (url) => {
     return housesData
   } catch (error) {
     console.log(error)
-		throw error;
+    throw error
   }
 }

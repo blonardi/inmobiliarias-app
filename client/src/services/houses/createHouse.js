@@ -1,16 +1,16 @@
-export const createHouse = (e, houses) => {
+export const createHouse = (e) => {
   const form = e.target
+  // console.log(form)
   const newFormHouse = {
-    id: houses.length + 1,
     price: form.housePrice.value,
     title: form.houseTitle.value,
     address: form.houseAddress.value,
     description: form.houseDescription.value,
-    meters: form.houseDimention.value,
+    dimention: form.houseDimention.value,
     type: form.houseType.value,
     location: form.houseLocation.value,
     realEstate: form.houseRealEstate.value,
-    image: form.houseImage.files[0]
+    houseImage: form.houseImage.value
   }
 
   return newFormHouse

@@ -1,16 +1,23 @@
 // import { useState } from 'react'
-import { createHouse } from '../../services/houses/createHouse'
+import { createHouse, postHouse } from '../../services/houses/index'
 import './Form.css'
 
-export const Form = ({ addNewFormHouse, houses }) => {
+export const Form = () => {
   // const [newHouse, setNewHouse] = useState()
+  // const housePrice = useField({ type: number })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const form = e.target
-    const newFormHouse = createHouse(e, houses)
+    const newFormHouse = await createHouse(e)
+    console.log(newFormHouse)
     // setNewHouse(createHouse(e))
-    addNewFormHouse(newFormHouse)
+    try {
+      const addedHouse = await postHouse(newFormHouse)
+      console.log({ addedHouse })
+    } catch (error) {
+      console.error('Error al agregar una nueva casa:', error)
+    }
     form.reset()
   }
 
@@ -89,7 +96,7 @@ export const Form = ({ addNewFormHouse, houses }) => {
         </select>
       </label>
       <label htmlFor='houseImage'>
-        <input type='file' name='houseImage' accept='image/*' />
+        <input type='text' name='houseImage' placeholder='Url de imagen' />
       </label>
       <button type='submit'>Agregar casa</button>
     </form>

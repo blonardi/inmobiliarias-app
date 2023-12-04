@@ -6,8 +6,12 @@ import { Filter } from '../../components/Filter/Filter'
 import { Form } from '../../components/Form/Form'
 import { getAllHouses } from '../../services/houses/getAllHouses'
 import { postHouse } from '../../services/houses/postHouse'
+import { Route, Routes, Link } from 'react-router-dom'
 
-const baseUrl = 'http://localhost:3001/api/houses'
+const baseUrl = process.env.NODE_ENV === 'development'
+  ? 'https://inmobiliarias-app.vercel.app/api/houses'
+  : 'http://localhost:3001/api/houses'
+
 export default function HomePage () {
   const backgroundImageStyles = {
     backgroundImage: 'url("https://cdn.pixabay.com/photo/2013/11/05/19/12/buildings-205986_1280.jpg")',
@@ -22,8 +26,9 @@ export default function HomePage () {
 
     const fetchData = async () => {
       try {
-        const result = await getAllHouses(baseUrl)
-        setHouses(result)
+        const result = await getAllHouses('http://localhost:3001/api/houses')
+        console.log(result.houses)
+        setHouses(result.houses)
       } catch (error) {
         console.error('Error al obtener las casas:', error)
       }
@@ -31,27 +36,6 @@ export default function HomePage () {
 
     fetchData()
   }, [])
-
-  const addNewFormHouse = async (nuevaCasa) => {
-    // de esta forma seria sin el async, manejo la promesa que mando desde el postHouse
-    // postHouse(nuevaCasa)
-    //   .then((nuevaCasaRes) => {
-    //     setHouses([...houses, nuevaCasaRes])
-    //   })
-    //   .catch((err) => {
-    //     console.error(err)
-    //   })
-
-    // CHATGPT WORKS
-    try {
-      const resultHouse = await postHouse(nuevaCasa)
-      console.log(resultHouse)
-      setHouses([...houses, resultHouse])
-    } catch (error) {
-      console.error('Error al agregar una nueva casa:', error)
-      throw error
-    }
-  }
 
   return (
     <>
@@ -72,36 +56,40 @@ export default function HomePage () {
         <section className='container-homepage'>
           {houses?.length > 0 && houses.map(
             ({
-              id,
+              permalink,
               price,
               title,
               address,
               description,
-              meters,
+              dimention,
               type,
               location,
               realEstate,
-              image
+              houseImage
             }) => (
               <Card
-                key={id}
-                id={id}
+                key={permalink}
+                id={permalink}
                 price={price}
                 title={title}
                 address={address}
                 description={description}
-                meters={meters}
+                dimention={dimention}
                 type={type}
                 location={location}
                 realEstate={realEstate}
-                image={image}
+                houseImage={houseImage}
               />
             )
           )}
         </section>
       </main>
+
       <footer>
-        <Form addNewFormHouse={addNewFormHouse} houses={houses} />
+        <Link to='/form'>
+          <button>FORM</button>
+        </Link>
+        {/* <Form addNewFormHouse={addNewFormHouse} houses={houses} /> */}
       </footer>
     </>
   )

@@ -5,21 +5,22 @@ import { Link } from 'react-router-dom'
 
 export const Card = ({
   id,
+  permalink,
   price,
   title,
   address,
-	description,
-  meters,
+  description,
+  dimention,
   type,
-	location,
+  location,
   realEstate,
-  image,
+  houseImage
 }) => {
   return (
     <Link to={`/details/${id}`} className='card-link'>
       <article className='house-card'>
         <div className='house-image'>
-          <img className='house-image-src' src={image} alt='' />
+          <img className='house-image-src' src={houseImage} alt='' />
         </div>
         <section className='house-info'>
           <div className='house-price'>
@@ -36,7 +37,7 @@ export const Card = ({
           </div>
         </section>
         <footer className='house-measures'>
-          <ItemCard meters={meters} type={type} inmobiliaria={realEstate} />
+          <ItemCard dimention={dimention} type={type} realEstate={realEstate} />
         </footer>
       </article>
     </Link>

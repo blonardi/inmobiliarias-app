@@ -16,13 +16,12 @@ import axios from 'axios'
 // }
 
 export const postHouse = async (newHouse) => {
+  // const apiUrl = 'http://localhost:3001/api/houses'
   const apiUrl = 'http://localhost:3001/api/houses'
   try {
     const response = await axios.post(
       apiUrl, newHouse)
-    console.log({ response })
     const { data } = response
-    console.log({ data })
     return data
   } catch (error) {
     console.error('Error al realizar la solicitud:', error)

@@ -3,6 +3,10 @@
 	margin: auto;
 }
 
+form {
+	margin-top: 140px;
+}
+
 label {
 	display: block;
 	margin-bottom: 10px;

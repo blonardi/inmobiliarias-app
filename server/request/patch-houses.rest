@@ -1,11 +1,11 @@
-POST http://localhost:3001/api/houses
+PATCH http://localhost:3001/api/houses/b5dc731a
 Content-Type: application/json
 
 
 {
-    "price": 820000,
-    "title": "Biurifal House",
-    "address": "Calle Principal 123",
+    "price": 150000,
+    "title": "Casa Chalet",
+    "address": "25 de Mayo 123",
     "description":
       "SumérgeteSumérgeteSumérgete en la serenidad de esta encantadora casa de campo. Con un hermoso jardín que te invita a la relajación al aire libre, esta residencia ofrece un refugio tranquilo en medio de la naturaleza. Sus detalles rústicos y ambiente acogedor te harán sentir como en casa.",
 		"houseImage" : "https://fincaraiz.com.co/blog/wp-content/uploads/2022/08/casas-modernas-1-1920x1130.jpg",
